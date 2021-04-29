@@ -6,15 +6,22 @@
 
     <groupId>sk.eset.dbsystems</groupId>
     <artifactId>es-shaded</artifactId>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
 
     <properties>
         <elasticsearch.version>6.8.13</elasticsearch.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
+            <version>${elasticsearch.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.plugin</groupId>
+            <artifactId>transport-netty4-client</artifactId>
             <version>${elasticsearch.version}</version>
         </dependency>
     </dependencies>
